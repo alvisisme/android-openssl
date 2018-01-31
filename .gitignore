@@ -1,5 +1,2 @@
-openssl-1.0.2g.tar.gz
-openssl-1.0.2g
-arm
-arm64
-.vscode
+.vscode/
+out/
