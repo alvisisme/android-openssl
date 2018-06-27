@@ -1,0 +1,9 @@
+
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t android-openssl-build .
+  - docker run --rm -v `pwd`/out:/home/out android-openssl-build

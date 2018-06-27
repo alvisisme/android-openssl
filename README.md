@@ -1,6 +1,8 @@
-# build openssl for android
+# Build openssl for android
 
-编译android平台arm64架构的openssl静态库.
+[![Build Status](https://travis-ci.org/alvisisme/android-openssl.svg?branch=master)](https://travis-ci.org/alvisisme/android-openssl)
+
+编译 Android 平台 arm64-v8a 架构的 openssl 静态库.
 
 ## 测试环境
 
