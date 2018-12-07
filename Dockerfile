@@ -1,10 +1,8 @@
 FROM alvisisme/arm64-android-toolchain
+LABEL maintainer=alvis<alvisisme@163.com>
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y --no-install-recommends binutils xutils-dev
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends binutils xutils-dev
-
-COPY build.sh /build.sh
-CMD ["/bin/bash","/build.sh"]
-VOLUME ["/home/out"]
-
-
-  
+USER root
+WORKDIR /out
+VOLUME ["/out"]
+CMD ["/bin/bash","/out/build.sh"]

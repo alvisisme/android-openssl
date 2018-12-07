@@ -1,7 +1,15 @@
 all: env build
 
 env:
-	docker build -t android-openssl-build .
+	docker-compose build
 
 build:
-	docker run --rm -v `pwd`/out:/home/out android-openssl-build
+	docker-compose run android-build-openssl
+
+dist:
+	rm -rf dist/*
+	cp build/lib/libssl.a dist/libssl.a
+	cp build/lib/libcrypto.a dist/libcrypto.a
+	cp -r build/include/openssl dist/openssl
+
+.PHONY: env build dist
