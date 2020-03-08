@@ -1,6 +1,6 @@
 version: '2'
 services:
-  openssl:
+  openssl-for-android:
     build: .
     image: openssl-for-android-arm64-v8a
     volumes:
