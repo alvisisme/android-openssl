@@ -1,9 +1,7 @@
 version: '2'
 services:
-  android-build-openssl:
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    image: android-build-openssl:v1.0.2g
+  openssl:
+    build: .
+    image: openssl-for-android-arm64-v8a
     volumes:
-      - .:/out
+      - ./build:/build

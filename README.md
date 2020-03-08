@@ -1,20 +1,54 @@
-# Build openssl for android
+# openssl-for-android
 
-[![Build Status](https://travis-ci.org/alvisisme/android-openssl.svg?branch=master)](https://travis-ci.org/alvisisme/android-openssl)
+[![Build Status](https://img.shields.io/travis/com/alvisisme/android-openssl?style=flat-square)](https://travis-ci.com/alvisisme/android-openssl)
 
-编译 Android 平台 arm64-v8a 架构的 openssl 静态库.
+编译openssl至android平台arm64-v8a架构。
 
-## 测试环境
+本工程仅编译openssl静态库。
 
-* ubuntu16.04
+## 目录
+
+- [背景](#背景)
+- [安装](#安装)
+- [用法](#用法)
+- [维护人员](#维护人员)
+- [贡献参与](#贡献参与)
+- [许可](#许可)
+- [参考引用](#参考引用)
+
+## 背景
+
+编译环境
+
+* ubuntu18.04
 * android-ndk-r13b
 * openssl-1.0.2g
 
-## 编译步骤
+## 安装
 
-```shell
-make
+将**dist**目录下对应头文件和库文件引入。
+
+## 用法
+
+推荐使用 docker 和 docker-compose 进行编译
+
+```bash
+docker-compose up --build
 ```
+
+编译后的文件位于 **build/lib** 目录下
+
+## 维护人员
+
+[@Alvis Zhao](https://github.com/alvisisme)
+
+## 贡献参与
+
+欢迎提交PR。
+
+## 许可
+
+© 2020 Alvis Zhao
 
 ## 参考资料
 
